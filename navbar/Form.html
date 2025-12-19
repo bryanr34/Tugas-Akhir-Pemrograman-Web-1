@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Bryan Ranindito Prevalno">
+  <meta name="keywords" content="HTML,belajar">
+  <meta name="description" content="pembelajaran HTML">
+  <title>Olah Raga Jousting</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  
+  <header>
+    <nav class="navbar">
+      <div class="logo"> <h2>Olah Raga Jousting</h2></div>
+      <ul class="nav-links">
+       <li><a href="../index.html" >Beranda</a></li>
+       <li><a href="Sejarah.html">Sejarah</a></li>
+       <li><a href="budaya.html">Budaya</a></li>
+        <li><a href="pemain.html">Pemain</a></li>
+        <li><a href="cara bermain.html">Cara Bermain</a></li>
+        <li><a href="perlengkapan.html">Perlengkapan</a></li>
+        <li><a href="Form.html"class="active">Form</a></li>      
+      </ul>
+    </nav>
+  </header>
+
+ <main>
+  <div class="form-container">
+    <h2>Form Login</h2>
+
+<form onsubmit="return validasiLogin()">
+  <label>Nama</label>
+  <input type="text" id="nama">
+
+  <label>Password</label>
+  <input type="password" id="password">
+
+  <label>Email</label>
+  <input type="email" id="email">
+
+  <div class="form-button">
+    <input type="submit" value="Login">
+    <input type="reset" value="Batal">
+  </div>
+</form>
+
+  </div>
+  <script>
+function validasiLogin() {
+  var nama = document.getElementById("nama").value;
+  var password = document.getElementById("password").value;
+  var email = document.getElementById("email").value;
+
+  if (nama === "" || password === "" || email === "") {
+    alert("Semua data harus diisi!");
+    return false;
+  } else {
+    alert("Login berhasil!");
+    window.location.href = "../index.html"; 
+    return false;
+  }
+}
+</script>
+
+</main>
+</body>
+</html>
